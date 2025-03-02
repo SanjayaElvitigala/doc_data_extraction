@@ -25,6 +25,7 @@ This will create a virtual environment and install all dependencies listed in th
 1. Create an account on [Hugging Face](https://huggingface.co/).
 2. Generate a personal access token from [Hugging Face Tokens](https://huggingface.co/settings/tokens).
 3. When selecting the "HuggingFace API" option in the Streamlit UI, input the token in the provided password input field to authenticate the inference API.
+4. For this demonstration the LLM with id `meta-llama/Llama-3.2-3B-Instruct` is used.
 
 ## Using a Locally Downloaded LLM
 1. Download and install the Ollama software from [Ollama](https://ollama.com/) according to your system.
