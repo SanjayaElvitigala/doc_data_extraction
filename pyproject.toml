@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ocr-trial"
+version = "0.1.0"
+description = ""
+authors = ["SanjayaElvitigala <elvitigalasanjaya@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10"
+torch = "^2.6.0"
+easyocr = "^1.7.2"
+matplotlib = "^3.10.0"
+streamlit = "^1.42.2"
+ollama = "^0.4.7"
+pypdf = "^5.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
