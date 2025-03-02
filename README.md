@@ -66,4 +66,6 @@ To start the Streamlit application, run:
 ```bash
 streamlit run ./streamlit_UI.py
 ```
+# Application Layout
 
+![Application Screenshot](images\app.jpg)
