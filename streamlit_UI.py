@@ -32,7 +32,11 @@ def get_response_llm(
 
                 if not ("Model too busy" in llm_response):
                     return filter_json_output(llm_response)
-            return f"Model too busy. {n_retries} retries were attempted"
+
+            if "Model too busy" in llm_response:
+                return f"Model too busy. {n_retries} retries were attempted"
+            else:
+                return llm_response
 
         else:
             st.write("please provide the hugging face api token")
@@ -86,9 +90,10 @@ if LLM_option == HUGGING_FACE_SELECT:
     token = st.sidebar.text_input(
         "Enter your hugging face Personal Access token", type="password"
     )
-elif LLM_option == LOCAL_LLM_SELECT and (uploaded_file.type in IMAGE_FILE_TYPES):
-    st.sidebar.info(
-        "Note: Consider clicking 'Get Summary' until you receive satisfactory result due to the quality of the image uploaded"
-    )
+elif LLM_option == LOCAL_LLM_SELECT and uploaded_file != None:
+    if uploaded_file.type in IMAGE_FILE_TYPES:
+        st.sidebar.info(
+            "Note: Consider clicking 'Get Summary' until you receive satisfactory result due to the quality of the image uploaded"
+        )
 
 st.button("Get Summary", on_click=get_summary(uploaded_file=uploaded_file))
