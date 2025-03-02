@@ -68,4 +68,4 @@ streamlit run ./streamlit_UI.py
 ```
 # Application Layout
 
-!(\images\app.jpg)
+![Application Screenshot](images/app.jpg)
